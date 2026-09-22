@@ -73,4 +73,24 @@ else:
     print("Error 404 Page Does Not Found")
 
 print(choose_vehicle)    
-    
+
+# Password Strength Checker
+Password=int(input("Enter password :"))
+
+if Password<5:
+    strength_length="weak"
+elif 5<Password<8:
+    Strength_length="Mediam"
+elif Password>10:
+    Strength_length="Strong"
+else:
+    print("Password does not exist")
+
+print(Strength_length)
+
+# Leap year Checker
+year=int(input("Enter year :"))
+if(year%400==0)or(year%4==0 and year%100!=0):
+    print("this is Leap year")
+else:
+    print("This is not leap year")
