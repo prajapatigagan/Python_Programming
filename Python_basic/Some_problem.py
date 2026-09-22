@@ -41,3 +41,36 @@ elif marks<=40:
 else:
     print("Error 404")
 
+# fruit Ripeness Checker
+
+Banana={"Green":"Unripe","Yellow":"Ripe","Brown":"Overripe"}
+Color=input("Enter Banana Color(Green/Yellow/Brown)")
+print(Banana.get(Color))
+
+# Weather
+Weather=input("Enter Banana Color(Sunny/Rainey/Snowy)")
+
+if Weather=="Sunny":
+    activities="Go to walk"
+elif Weather=="Rainey":
+    activities="Read a book"
+elif Weather=="Snowy":
+    activities="Build a snowman"
+
+print(activities)        
+
+
+# Tranprotation Mode Selection
+distance=int(input("Enter Distance :"))
+
+if distance<3:
+    choose_vehicle="walk"
+elif 3<distance<15:
+    choose_vehicle="Bike"
+elif distance>15:
+    choose_vehicle="Car"
+else:
+    print("Error 404 Page Does Not Found")
+
+print(choose_vehicle)    
+    
