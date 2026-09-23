@@ -13,5 +13,6 @@
 -Boolean : True ,False
 -None : None
 -Function,modules,classes
+-Oops Concept
 
 -Advance: decorators,genrators,Iterators,MetaProgramming
