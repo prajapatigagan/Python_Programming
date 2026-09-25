@@ -13,17 +13,20 @@ cursor.execute('''
 ''')
 
 def list_video():
-    pass
+    cursor.execute("SELECT * FROM videos")
+    for row in cursor.fetchall():
+        print(row)
 
-def add_video():
-    pass
+def add_video(name,time):
+    cursor.execute("INSERT INTO videos(name,time) VALUES(?,?)",(name, time))
+    con.commit()
+def update_video(new_name,new_time,video_id):
+    cursor.execute("UPDATE videos SET name=?,time=?,where id=?",(new_name,new_time,video_id))
+    con.commit()
 
-def update_video():
-    pass
-
-def delete_video():
-    pass
-
+def delete_video(video_id):
+    cursor.execute("DELETE FROM videos WHERE id=?", (video_id,))
+    cursor.commit()
 def main():
     while True:
         print("\n Youtube manager app with DB")
